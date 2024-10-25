@@ -15,14 +15,11 @@ public class App {
         MetodosOrdenamientoBusquedaGrupoB mob1 = new MetodosOrdenamientoBusquedaGrupoB();
         System.out.println("Listado de carros generadas:");
         for (Carro carro : carros) {
-        mob1.showCar(carros);
-        // System.out.println(carro);
         }
         mob1.sortBYearWithBubbleAvnAsendente(carros);
         mob1.showCar(carros);
-        mob1.searchBinaryByYear(carros, 20);
-        mob1.showCar(carros);
-        int result1 = mob1.searchBinaryByYear(carros, 0);
+
+        int result1 = mob1.searchBinaryByYear(carros, 2017);
         if (result1 == -1) {
             System.out.println("No se encontro");
             
@@ -34,13 +31,10 @@ public class App {
         MetodosOrdenamientoBusqueda mob = new MetodosOrdenamientoBusqueda();
         System.out.println("Listado de personas generado");
         for (Person persona : personas){
-        mob.showPeople(personas);
-            //System.out.println("Listado de personas generado" + persona);
         }
         mob.sortByAgeWithSelection(personas);
         mob.showPeople(personas);
-        mob.searchBinaryByAge(personas, 15);
-        mob.showPeople(personas);
+
 
         int result = mob.searchBinaryByAge(personas, 22);
         if(result == -1){
